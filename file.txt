@@ -1,0 +1,80 @@
+*For the get http method :
+
+            Get a Product by ID
+            URL: /products/:id
+            Method: GET
+            Description: Retrieve a product by its ID.
+            Request Parameters:
+
+            :id (integer) - The ID of the product to retrieve.
+            Response:
+
+            Status Code: 200 OK (Product found)
+            Status Code: 404 Not Found (Product not found)
+            Response Body:
+            A product object.
+
+            Search Products
+            URL: /products/p/search
+            Method: GET
+            Description: Search for products based on query parameters.
+            Request Parameters:
+
+            q (string) - The search query.
+            minPrice (number) - Minimum price filter.
+            maxPrice (number) - Maximum price filter.
+            Response:
+
+            Status Code: 200 OK
+            Response Body:
+            An array of product objects matching the search criteria.
+
+*For the post http method :
+
+            Create a New Product
+            URL: /products
+            Method: POST
+            Description: Create a new product.
+            Request Body:
+
+            JSON object with the following fields:
+            name (string) - The name of the product.
+            price (number) - The price of the product.
+            Response:
+
+            Status Code: 201 Created
+            Response Body:
+            The created product object.
+
+*For the put http method :
+
+            Update a Product by ID
+            URL: /products/:id
+            Method: PUT
+            Description: Update an existing product by its ID.
+            Request Parameters:
+
+            :id (integer) - The ID of the product to update.
+            Request Body:
+
+            JSON object with the following fields (can include one or both):
+            name (string) - The updated name of the product.
+            price (number) - The updated price of the product.
+
+*For the delete http method :
+
+            URL: /products/:id
+            Method: DELETE
+            Description: Delete a product by its ID.
+            Request Parameters:
+
+            :id (integer) - The ID of the product to delete.
+            Response:
+
+            Status Code: 201 Created
+            Status Code: 404 Not Found (Product not found)
+            Response Body:
+            A message indicating the deletion.
+
+
+
